@@ -1,0 +1,14 @@
+<h1> <%= @place.name %> </h1>
+<ul>
+  <% for post in @place.posts %>
+    <li><%= "#{post.title}" %></li>
+    <li><%= "#{post.long_description}" %></li>
+  <% end %>
+</ul>
+<p>
+<a href="/posts/new?company_id=<%=@place.id%>">New Post</a>
+</p>
+
+<p>
+    <a href="/places">Go Back to all places</a>
+</p>
